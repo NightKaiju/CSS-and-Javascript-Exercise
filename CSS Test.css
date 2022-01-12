@@ -1,0 +1,136 @@
+body {
+    background-color: white;
+  }
+
+
+
+.invert {
+    margin: 50px;
+    width: 100px;
+    height: 902px;
+    color: black;
+    background-color: yellow;
+    line-height: 200px;
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 11%;
+    left: -10%;
+    width: 100%;
+
+    /* The inverting: */
+    animation-name: invert;
+    animation-duration: 2500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes invert {
+from {filter: invert(0%);}
+to {filter: invert(100%);}
+}
+
+.jump {
+    margin: 50px;
+    width: 100px;
+    height: 300px;
+    color: black;
+    line-height: 200px;
+    margin-top: -100px;
+    position: relative;
+    text-align: center;
+    top: 30%;
+    left: -10%;
+    width: 100%;
+
+
+    /* The jumping AND inverting: */
+    animation-name: jump;
+    animation-duration: 2500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes jump {
+    from {transform: translate3d(0, 0, 0); filter: invert(0%); }
+    25% {transform: translate3d(0, 200px, 0); filter: invert(100%);}
+    50% {transform: translate3d(0, -200, 0); filter: invert(0%);}
+    75% {transform: translate3d(0, -200px, 0); filter: invert(100%);}
+    100% {transform: translate3d(0, 0, 0); filter: invert(0%);}
+
+}
+
+.spin {
+    margin: 50px;
+    color: black;
+    line-height: 200px;
+    margin-top: -100px;
+    position: relative;
+    text-align: center;
+    top: 40%;
+    left: -10%;
+    width: 100%;
+    
+    /* The spinning: */
+    animation-name: spin;
+    animation-duration: 2500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+p {
+    color: black;
+    text-align: center;
+    font-size: 50px;
+    top: 30%;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    
+ 
+ 
+}
+
+.spinbox {
+    background-color: white;
+    height: 900px;
+    width: 500px;
+    border: 5px solid black;
+    margin: 20px;
+    position: absolute;
+    top: 0%;
+    left: 40%;
+    
+    }
+
+
+.invertbox {
+    background-color: white;
+    height: 900px;
+    width: 500px;
+    border: 5px solid black;
+    margin: 20px;
+    position: absolute;
+    top: 0%;
+    left: 22%;
+    
+  }
+
+
+
+.jumpbox {
+    background-color: blue;
+    height: 900px;
+    width: 500px;
+    border: 5px solid black;
+    margin: 20px;
+    position: absolute;
+    top: 0%;
+    left: 58.5%;
+    
+  }
