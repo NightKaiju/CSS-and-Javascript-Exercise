@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<center>
+
+<h1>The JavaScript Lottery</h1>
+
+<h2>Click the button to draw a number.</h2>
+
+<button type="button" style="height:100px;width:200px" onclick="rollNumber()"><h3>Let's Play!</h3></button>
+
+<h2>Your Number: <p id="random"></p> </h2>
+<h3>* Any number in the 1 to 1000 range wins!</h3> 
+
+
+</center>
+<script>
+var ranNum = 0;
+document.getElementById("random").innerHTML = 0;
+
+function rollNumber(){
+    const rollTimeout = setTimeout(stopRoll, 2000);
+    rollingNum = setInterval(randomNumber,20)
+}
+
+function stopRoll(){
+    clearInterval(rollingNum);
+    winNumber();
+}
+
+function randomNumber(){
+    ranNum = Math.floor(Math.random() * 10000) + 1;
+    document.getElementById("random").innerHTML = ranNum;
+}
+
+function winNumber(){
+if (ranNum <= 1000){
+   alert("Congratulations, You won.");
+   document.getElementById("random").innerHTML = 0;
+   console.log(ranNum);
+}else{
+   alert("Too bad! You've lost!");
+   document.getElementById("random").innerHTML = 0;
+   console.log(ranNum);
+}
+
+
+}
+</script>
+
+</body>
+</html> 
